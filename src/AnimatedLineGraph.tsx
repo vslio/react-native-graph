@@ -72,6 +72,7 @@ export function AnimatedLineGraph({
   TopAxisLabel,
   BottomAxisLabel,
   enableSmoothing = true,
+  checkExactPoints = true,
   ...props
 }: AnimatedLineGraphProps): React.ReactElement {
   const [width, setWidth] = useState(0)
@@ -197,6 +198,7 @@ export function AnimatedLineGraph({
       canvasHeight: height,
       canvasWidth: width,
       enableSmoothing,
+      checkExactPoints,
     }
 
     if (shouldFillGradient) {

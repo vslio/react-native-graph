@@ -52,6 +52,12 @@ interface BaseLineGraphProps extends ViewProps {
    * When disabled, the graph will be more accurate according to the dataset
    */
   enableSmoothing?: boolean
+  /**
+   * Boolean flag to check if the point is exact.
+   * If true, only exact points will be drawn. If false, all points will be drawn.
+   * Default is true.
+   */
+  checkExactPoints?: boolean
 }
 
 export type StaticLineGraphProps = BaseLineGraphProps & {
