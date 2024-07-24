@@ -76,7 +76,7 @@ const solveCubic = (a: number, b: number, c: number, d: number): number[] => {
   }
 
   // Convert back from depressed cubic
-  for (let i = 0; i < roots.length; i++) roots[i] -= b / (3 * a)
+  for (let i = 0; i < roots.length; i++) roots[i]! -= b / (3 * a)
 
   return roots
 }
@@ -128,8 +128,6 @@ interface Cubic {
 }
 
 const linearInterpolation = (x: number, from: Vector, to: Vector): number => {
-  'worklet'
-
   // Handles vertical lines or when 'from' and 'to' have the same x-coordinate
   if (from.x === to.x) return from.y // Return the y-value of 'from' (or 'to') if the line is vertical
 

@@ -129,9 +129,8 @@ export function AnimatedLineGraph({
     const path = Skia.Path.Make()
     path.moveTo(0, height / 2)
     for (let i = 0; i < width - 1; i += 2) {
-      const x = i
       const y = height / 2
-      path.cubicTo(x, y, x, y, x, y)
+      path.cubicTo(i, y, i, y, i, y)
     }
 
     return path
