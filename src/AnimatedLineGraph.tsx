@@ -252,6 +252,7 @@ export function AnimatedLineGraph({
 
     setCommandsChanged(commandsChanged + 1)
 
+    interpolateProgress.value = 0
     interpolateProgress.value = withSpring(1, {
       mass: 1,
       stiffness: 500,
